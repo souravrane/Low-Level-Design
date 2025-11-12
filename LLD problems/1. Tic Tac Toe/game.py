@@ -22,7 +22,7 @@ class Game:
             col = int(input(f"Enter the col (0 to {self.size - 1}): "))
             
             try:
-                self.board.make_move(row, col, current_player)
+                self.board.make_move(row, col, current_player.symbol)
 
                 if self.board.check_winner(row, col, current_player.symbol):
                     print(f"{current_player.name} is the WINNER !!")
